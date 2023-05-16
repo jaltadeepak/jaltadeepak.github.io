@@ -66,12 +66,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-weight: bolder;
         }
 
         #page1 {
             background-color: black;
-            color: rgb(204, 204, 204);
         }
 
         #page2 {
@@ -80,7 +78,7 @@
 
         #page3 {
             background-color: black;
-            color: rgb(204, 204, 204);
+            
         }
 
         #fixed-text {
@@ -93,17 +91,16 @@
             z-index: 1;
         }
 
-        a{
+        a {
             color: inherit;
         }
 
-        /* a:nth-child(1), a:nth-child(3){
-            color: rgb(204, 204, 204);
+        .linker{
+            background-color: #b7b7b7;
+            border-radius: 20%;
+            font-weight: bolder;
         }
-
-        a:nth-child(2){
-            color: red;
-        } */
+        
     </style>
 </head>
 
@@ -115,17 +112,23 @@
         <div id="fixed-text">Project</div>
         <div id="page1">
             <a style="text-decoration: none" href="https://jaltadeepak.github.io/tictactoe/">
-                TicTacToe
+                <button class="linker">
+                    TicTacToe
+                </button>
             </a>
         </div>
         <div id="page2">
             <a style="text-decoration: none" href="https://jaltadeepak.github.io/gym/">
-                Gym 
+                <button class="linker">
+                    Gym
+                </button>
             </a>
         </div>
         <div id="page3">
             <a style="text-decoration: none" href="https://jaltadeepak.github.io/sorting-visualizer/">
-                Sorting Visualizer
+                <button class="linker">
+                    Sorting Visualizer
+                </button>
             </a>
         </div>
     </div>
@@ -140,4 +143,3 @@
 </body>
 
 </html>
-
