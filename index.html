@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #282828;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .visible {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.5s linear;
+        }
+
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 0.5s, opacity 0.5s linear;
+        }
+
+        .loader {
+            /* width: 0px;
+            height: 0px; */
+            color: rgb(191, 191, 191);
+            position: relative;
+            font-weight: bolder;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            position: relative;
+        }
+
+        #page1,
+        #page2,
+        #page3 {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #page1 {
+            background-color: black;
+        }
+
+        #page2 {
+            background-color: white;
+        }
+
+        #page3 {
+            background-color: black;
+            
+        }
+
+        #fixed-text {
+            position: fixed;
+            top: 50vh;
+            left: 20vw;
+            transform: translate(-50%, -50%);
+            color: white;
+            mix-blend-mode: difference;
+            z-index: 1;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .linker{
+            background-color: #b7b7b7;
+            border-radius: 1rem;
+            font-weight: bolder;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" class="visible">
+        <span class="loader">jaltadeepak</span>
+    </div>
+    <div class="container">
+        <div id="fixed-text">Project</div>
+        <div id="page1">
+            <a style="text-decoration: none" href="https://jaltadeepak.github.io/tictactoe/">
+                <button class="linker">
+                    TicTacToe
+                </button>
+            </a>
+        </div>
+        <div id="page2">
+            <a style="text-decoration: none" href="https://jaltadeepak.github.io/gym/">
+                <button class="linker">
+                    Gym
+                </button>
+            </a>
+        </div>
+        <div id="page3">
+            <a style="text-decoration: none" href="https://jaltadeepak.github.io/sorting-visualizer/">
+                <button class="linker">
+                    Sorting Visualizer
+                </button>
+            </a>
+        </div>
+    </div>
+    <script>
+        var hideButtonClick = document.querySelector("#wrapper"),
+            content = document.querySelector("#wrapper");
+
+        hideButtonClick.addEventListener("click", function () {
+            content.className = "hidden";
+        }, false);
+    </script>
+</body>
+
+</html>
