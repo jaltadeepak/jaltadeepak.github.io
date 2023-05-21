@@ -77,8 +77,7 @@
         }
 
         #page3 {
-            background-color: black;
-            
+            background-color: black;   
         }
 
         #fixed-text {
@@ -133,12 +132,21 @@
         </div>
     </div>
     <script>
-        var hideButtonClick = document.querySelector("#wrapper"),
-            content = document.querySelector("#wrapper");
+        // var hideButtonClick = document.querySelector("#wrapper"),
+        //     content = document.querySelector("#wrapper");
 
-        hideButtonClick.addEventListener("click", function () {
-            content.className = "hidden";
-        }, false);
+        // hideButtonClick.addEventListener("click", function () {
+        //     content.className = "hidden";
+        // }, false);
+        document.addEventListener("DOMContentLoaded", function () {
+        var wrapper = document.querySelector("#wrapper");
+        var container = document.querySelector(".container");
+
+        setTimeout(function () {
+            wrapper.classList.add("hidden");
+            container.classList.add("visible");
+        }, 500);
+        });
     </script>
 </body>
 
